@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Quiz</title>
+<style>
+body {font-family: 'Segoe UI', sans-serif; background:#0f172a; color:#e2e8f0; margin:0;}
+.container {max-width:600px; margin:auto; padding:20px;}
+.card {background:#1e293b; padding:20px; border-radius:12px; margin-top:15px;}
+button {background:#3b82f6; color:white; border:none; padding:12px; border-radius:8px; width:100%; margin-top:10px;}
+input, select {padding:10px; width:100%; border-radius:6px; margin-top:10px;}
+h2 {text-align:center;}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h2>🚀 Modern Quiz</h2>
+
+<div id="start" class="card">
+<input id="username" placeholder="Enter Name">
+<select id="subject">
+<option value="math">Math</option>
+<option value="science">Science</option>
+</select>
+<input type="number" id="numQ" value="10">
+<button onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<div id="quiz" class="card" style="display:none;">
+<div id="timer"></div>
+<h3 id="question"></h3>
+<div id="options"></div>
+<button onclick="nextQ()">Next</button>
+</div>
+
+<div id="result" class="card" style="display:none;"></div>
+
+<div id="leaderboard" class="card"></div>
+
+<button onclick="downloadCSV()">⬇ Export CSV</button>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
